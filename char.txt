@@ -1,0 +1,342 @@
+
+Stack Overflow
+
+    Products
+    Customers
+    Use cases
+
+    Log in Sign up
+
+By using our site, you acknowledge that you have read and understand our Cookie Policy, Privacy Policy, and our Terms of Service.
+
+    Home
+        Public
+        Stack Overflow
+        Tags
+        Users
+        Jobs
+        Teams
+        What’s this?
+
+        First 10 Free
+
+Java - I want to read a file name from command line then use a bufferedreader to read each line
+Ask Question
+Asked 6 years, 3 months ago
+Active 1 year, 1 month ago
+Viewed 43k times
+2
+1
+
+I'm getting an eclipse red underline error on the
+
+ br = new BufferedReader(new FileReader(inFile));
+
+line on "inFile". This is the object that I would like to read which I believe contains the command line filename/path that I give it on the command line. Am I handling this wrong?
+
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+
+     public static void main(String[] args) {
+      if (0 < args.length) {
+          File inFile = new File(args[0]);
+      }
+
+        BufferedReader br = null;
+
+        try {
+
+            String sCurrentLine;
+
+            br = new BufferedReader(new FileReader(inFile));
+
+            while ((sCurrentLine = br.readLine()) != null) {
+                System.out.println(sCurrentLine);
+            }
+
+        }
+
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        finally {
+            try {
+                if (br != null)br.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+}
+
+java command-line bufferedreader
+share
+improve this question
+edited Feb 8 '17 at 20:55
+Winter
+2,06155 gold badges1818 silver badges4141 bronze badges
+asked May 28 '13 at 21:56
+john stamos
+42355 gold badges99 silver badges2929 bronze badges
+
+    declare inFile outside of the if block – lockstock May 28 '13 at 21:58
+    1
+    close } for if just before } of the main method – Sam May 28 '13 at 22:00
+
+add a comment
+5 Answers
+active
+oldest
+votes
+6
+
+Change this:
+
+if (0 < args.length) {
+    File inFile = new File(args[0]);
+}
+
+to this:
+
+File inFile = null;
+if (0 < args.length) {
+   inFile = new File(args[0]);
+} else {
+   System.err.println("Invalid arguments count:" + args.length);
+   System.exit();
+}
+
+because the file variable is not accessible outside the if/else statement.
+
+I've added in the else (for the case when no args are provided) a friendly message saying the the argument count was invalid and exit for the program.
+share
+improve this answer
+edited May 28 '13 at 23:20
+answered May 28 '13 at 22:00
+Konstantin Yovkov
+54.4k77 gold badges8181 silver badges131131 bronze badges
+
+    So adding the else statement now gives a larger scope to inFile? Or you did that just to give the user better knowledge of the args error? – john stamos May 28 '13 at 22:05
+    No, defining the inFile outside of the if/else statement gives larger scope (the scope is within the main method) – Konstantin Yovkov May 28 '13 at 22:08
+    Perfect, thank you. I think you can take out the "File" inside the if statement now as you have already declared inFile as such outside the if, other than that I think that's good. – john stamos May 28 '13 at 23:17
+    Correct, missed to fix that. Cheers! :) – Konstantin Yovkov May 28 '13 at 23:20
+    1
+    thanks a ton @KonstantinYovkov, you save my day. – Om Prakash Jan 25 '17 at 11:49
+
+add a comment
+1
+
+inFile is declared in the if statement. As such, it's scope ends at line 11;
+share
+improve this answer
+answered May 28 '13 at 22:00
+Andrew W
+3,78811 gold badge1212 silver badges1515 bronze badges
+add a comment
+1
+
+Your variable, inFile, is local to the containing if-block.
+
+Perhaps this:
+
+ public static void main(String[] args) {
+      File inFile = null;
+
+      if (0 < args.length) {
+          inFile = new File(args[0]);
+      }
+
+share
+improve this answer
+answered May 28 '13 at 22:03
+Arthur Dent
+73633 silver badges77 bronze badges
+add a comment
+1
+
+The variable inFile loses scope outside of the if block:
+
+  if (0 < args.length) {
+      File inFile = new File(args[0]);
+  }
+
+Change to:
+
+  File inFile = null;
+  if (0 < args.length) {
+      inFile = new File(args[0]);
+      // Make sure the file exists, can read, etc...
+  }
+  else
+  {
+    // Do something if a required parameter is not provided...
+  }
+
+share
+improve this answer
+edited Aug 13 '18 at 17:41
+answered May 28 '13 at 22:01
+Darrell Teague
+2,7411919 silver badges3333 bronze badges
+
+    Note that one must take care as to scope and associated synchronization considerations of File variable in question. Limit to encapsulated method as best practice. – Darrell Teague Aug 13 '18 at 17:44
+
+add a comment
+0
+
+After the 'if' statement block, you could dump contents of "inFile" to a Scanner object.
+
+Scanner scannedIn = new Scanner(inFile);
+
+Then use the '.next' method to verify that you're accessing the file.
+
+System.out.println(scannedIn.next());
+
+share
+improve this answer
+answered Dec 9 '15 at 17:49
+Stubbs
+1
+add a comment
+Your Answer
+
+Sign up or log in
+Sign up using Google
+Sign up using Facebook
+Sign up using Email and Password
+Post as a guest
+Name
+Email
+
+Required, but never shown
+Post Your Answer
+
+By clicking “Post Your Answer”, you agree to our terms of service, privacy policy and cookie policy
+Not the answer you're looking for? Browse other questions tagged java command-line bufferedreader or ask your own question.
+Blog
+
+    Practical Ways to Write Better JavaScript
+
+Featured on Meta
+
+    Unicorn Meta Zoo #8: What does leadership look like in our communities?
+
+    Stack Exchange and Stack Overflow are moving to CC BY-SA 4.0
+
+    Join our dedicated Meta Stack Overflow chat room!
+
+85 people chatting
+Java
+33 mins ago - OakBot
+[OakBot: 33 mins ago]
+[Druckles: 57 mins ago]
+[Wietlol: 2 hours ago]
+[Neil: 2 hours ago]
+[geisterfurz007: Sep 13 at 11:58]
+[Johannes Kuhn: Sep 11 at 20:06]
+[Madara Uchiha: Sep 11 at 14:43]
+Android
+52 mins ago - Tim Castelijns
+[Tim Castelijns: 52 mins ago]
+[Raghav Sood: 1 hour ago]
+[W0MP3R: 4 hours ago]
+[Tom K.: 6 hours ago]
+[Pratik Butani AndroidDev: 2 days ago]
+[netpork: Sep 13 at 17:00]
+[geisterfurz007: Sep 12 at 17:25]
+Related
+1406
+How do I create a Java string from the contents of a file?
+533
+How do I parse command line arguments in Java?
+578
+How to read/process command line arguments?
+610
+How to read all files in a folder from Java?
+888
+Reading a plain text file in Java
+857
+List all environment variables from command line?
+795
+How to read a large text file line by line using Java?
+1751
+How do I import an SQL file using the command line in MySQL?
+1
+Working on a java based chatting application using threading
+0
+why spill failure happens for Custom Data Type in Hadoop
+Hot Network Questions
+
+    Output Distinct Factor Cuboids
+    Where is it? - The Google Earth Challenge Ep. 4
+    Can Brexit be undone in an emergency?
+    Amiga 500 OCS/ECS vs Mega Drive VDP
+    How do you determine which representation of a function to use for Newton's method?
+    Wouldn't Kreacher have been able to escape even without following an order?
+    Did slaves have slaves?
+    Why does an orbit become hyperbolic when total orbital energy is positive?
+    Are all article combinations valid patterns for "the" ɴᴏᴜɴ of "the" ɴᴏᴜɴ?
+    Why cannot a convert make certain statements? I feel they are being pushed away at the same time respect is being given to them
+    What are the typical trumpet parts in classical music?
+    Is the name of an interval between two notes unique and absolute?
+    LaTeX matrix formatting
+    Unpredictability of Stock Market
+    What does the "capacitor into resistance" symbol mean?
+    Talk about Grandpa's weird talk: Who are these folks?
+    What is Cousin Itt in The Addams Family?
+    Derivation of 2pi in the period of a simple pendulum.
+    All numbers in a 5x5 Minesweeper grid
+    Is my sink P-trap too low?
+    Is the Bone Armour skill from Bone Barrier ascendancy skill tagged as "minion"?
+    How to make classical firearms effective on space habitats despite the coriolis effect?
+    Exam design: give maximum score per question or not?
+    Why is belonging not transitive?
+
+Question feed
+
+Stack Overflow
+
+    Questions
+    Jobs
+    Developer Jobs Directory
+    Salary Calculator
+    Help
+    Mobile
+    Disable Responsiveness
+
+Products
+
+    Teams
+    Talent
+    Advertising
+    Enterprise
+
+Company
+
+    About
+    Press
+    Work Here
+    Legal
+    Privacy Policy
+    Contact Us
+
+Stack Exchange
+Network
+
+    Technology
+    Life / Arts
+    Culture / Recreation
+    Science
+    Other
+
+    Blog
+    Facebook
+    Twitter
+    LinkedIn
+
+site design / logo © 2019 Stack Exchange Inc; user contributions licensed under cc by-sa 4.0 with attribution required. rev 2019.9.13.34906

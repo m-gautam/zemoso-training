@@ -1,14 +1,35 @@
+/**
+ * Create a Cycle class, with subclasses Unicycle, Bicycle and Tricycle.
+ * Add a balance( ) method to Unicycle and Bicycle, but not to Tricycle.
+ * Create instances of all three types and upcast them to an array of Cycle.
+ * Try to call balance( ) on each element of the array and observe the results.
+ * Downcast and call balance( ) and observe what happens.
+ *
+ *
+ * Author : Gautam Meena
+ * Date : 19 September 2019
+ **/
+
 package com.java.assignment.inheritance;
 
+interface cycle{
+    void balance();
+    void wheels();
 
-class Super{
+}
+class Super implements cycle{
 
     Super(){
         System.out.println("Super Class");
     }
 
+    @Override
     public void balance() {
         System.out.println("Balance of super class");
+    }
+
+    public void wheels(){
+
     }
 
 

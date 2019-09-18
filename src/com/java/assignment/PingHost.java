@@ -1,15 +1,24 @@
+/**
+ *  Function that will ping any host ( given as input ) and computes the median of the time taken to ping.
+ * Author : Gautam Meena
+ * Date : 19 September 2019
+ * Time Complexity : O(nlog(n))
+ **/
+
+
 package com.java.assignment;
 
 import java.net.*;
-import java.util.Arrays;
 
-public class Assignment_3 {
+public class PingHost {
 
     private long[] array;
     private long[] sortedArr;
     private int n;
     private String address;
 
+    /** Implemented merge sort
+     **/
     private void merge(long[] arr, int start, int mid, int end){
 
         int n1 = mid - start + 1;
@@ -84,17 +93,22 @@ public class Assignment_3 {
     }
 
     private void ping() {
+        /**
+         * it pings given host address
+         * calculates the ping time and add it into array
+         **/
+
         int i = 0;
         while (i < n){
             try {
-                //address = "google.com";
+
                 InetAddress inet = InetAddress.getByName(address);
                 System.out.println("Sending ping Request to " + address);
                 long current = System.currentTimeMillis();
-                //System.out.println(current);
+
                 if (inet.isReachable(1000)) {
                     long currentTime = System.currentTimeMillis();
-                    //System.out.println(currentTime);
+
                     array[i] = currentTime - current;
                 } else {
                     System.out.println("not Reachable");
@@ -108,17 +122,17 @@ public class Assignment_3 {
 
     }
 
-    // two arguments should be given while executing
-    // first one host address
-    // second one no. of pings
-    // this code will need root privileges to run this code as it ICMP request is sent to server to
-    // ping the host address and system ping file needs root privileges to execute
-
+    /** two arguments should be given while executing
+    * first one host address
+    * second one no. of pings
+    * this code will need root privileges to run this code as it ICMP request is sent to server to
+    * ping the host address and system ping file needs root privileges to execute
+     **/
 
     // Used merge sort to sorts the array containing ping time.
     public static void main(String[] args){
 
-        Assignment_3 obj = new Assignment_3();
+        PingHost obj = new PingHost();
 
         obj.address = args[0];
         obj.n = Integer.parseInt(args[1]);

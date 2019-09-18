@@ -1,6 +1,15 @@
+/**
+ * A vampire number v is a number with an even number of digits n,
+ * that can be factored into two numbers x and y each with n/2 digits and not both with trailing zeroes,
+ * where v contains precisely all the digits from x and from y, in any order.
+ * Write a java program to print first 100 vampire numbers.
+ *
+ * Author : Gautam Meena
+ * Date : 19 September 2019
+ **/
 package com.java.assignment;
 
-public class Assignment_6 {
+public class VampireNo {
 
     public static void main(String[] args){
         int n = 1;

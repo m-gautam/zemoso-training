@@ -1,12 +1,19 @@
+/**
+ * Create three new types of exceptions. Write a class with a method that throws all three.
+ * In main( ), call the method but only use a single catch clause that will catch all three types of exceptions.
+ * Add a finally clause and verify that your finally clause is executed, even if a NullPointerException is thrown.
+ *
+ * Author : Gautam Meena
+ * Date : 19 September 2019
+ **/
+
 package com.java.assignment;
 
-import java.lang.IndexOutOfBoundsException;
 import java.io.FileWriter;
-import java.io.IOError;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Assignment_8 {
+public class OccurencesOfChar {
     private static final int SIZE = 10;
     private PrintWriter out = null;
     private int[] arr = new int[SIZE];
@@ -20,13 +27,17 @@ public class Assignment_8 {
                 arr[i] = 1;
             }
         }
+        // checked exception
         catch (IOException e){
             System.err.println("Caught IO Exception " + e);
         }
 
+        // Runtime Exception : if access index of array which does not exist
         catch (ArrayIndexOutOfBoundsException e){
             System.err.println("Error : IndexOutOfBoundsException " + e);
         }
+
+        // Runtime exception : if variable is null and is used to access it.
         catch (NullPointerException e){
             System.err.println("Error : NUllPointerException " + e);
         }
@@ -44,7 +55,7 @@ public class Assignment_8 {
 
 
     public static void main(String[] args){
-        Assignment_8 obj = new Assignment_8();
+        OccurencesOfChar obj = new OccurencesOfChar();
         obj.writeInFile();
     }
 }
