@@ -12,25 +12,16 @@
 
 package com.java.assignment.inheritance;
 
-interface cycle{
-    void balance();
-    void wheels();
-
-}
-class Super implements cycle{
+class Super {
 
     Super(){
         System.out.println("Super Class");
     }
 
-    @Override
     public void balance() {
         System.out.println("Balance of super class");
     }
 
-    public void wheels(){
-
-    }
 
 
 }

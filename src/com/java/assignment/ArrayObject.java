@@ -1,7 +1,9 @@
 /**
- * Create a class with a constructor that takes a String argument. During construction, print the argument.
+ * I. Create a class with a constructor that takes a String argument. During construction, print the argument.
  * Create an array of object references to this class, but don’t actually create objects to assign into the array.
  * When you run the program, notice whether the initialization messages from the constructor calls are printed.
+ *
+ *II.   Complete the previous exercise by creating objects to attach to the array of references.
  *
  * Author : Gautam Meena
  * Date : 19 September 2019
@@ -17,6 +19,8 @@ public class ArrayObject {
 
     public static void main(String[] args){
         ArrayObject[] obj = new ArrayObject[2];
+
+        // II-part solution
         obj[0] = new ArrayObject("hello");
     }
 }
