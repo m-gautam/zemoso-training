@@ -11,7 +11,7 @@ package com.java.assignment;
 
 import java.util.Scanner;
 
-public class containAllAlphabets {
+public class ContainAllAlphabets {
     /**
      * counts the occurence of character in string
      * updates the variable to 1 for each character
@@ -41,7 +41,7 @@ public class containAllAlphabets {
         String str = in.nextLine();
         System.out.println(args[0]);
         // String str="The quick brown fox jumps over the lazy dog";
-        containAllAlphabets obj = new containAllAlphabets();
+        ContainAllAlphabets obj = new ContainAllAlphabets();
         System.out.println(obj.checkAllCharacters(str));
 
     }

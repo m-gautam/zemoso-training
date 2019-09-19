@@ -13,7 +13,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class OccurencesOfChar {
+public class ErrorHandling {
     private static final int SIZE = 10;
     private PrintWriter out = null;
     private int[] arr = new int[SIZE];
@@ -55,7 +55,7 @@ public class OccurencesOfChar {
 
 
     public static void main(String[] args){
-        OccurencesOfChar obj = new OccurencesOfChar();
+        ErrorHandling obj = new ErrorHandling();
         obj.writeInFile();
     }
 }
