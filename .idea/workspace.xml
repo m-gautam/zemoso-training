@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfcc6385-1d67-43c1-a899-be9bf13da5a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/char.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/java/assignment/SList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/zadmin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/zadmin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_6b.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_6b.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_6c.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_6c.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Assignment_9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignments/com/java/assignment/Datet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/assignment/Assignment_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/assignment/FileSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/assignment/Assignment_11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/assignment/Assignment_11.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/assignment/Assignment_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/assignment/Assignment_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/assignment/Assignment_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/assignment/Assignment_3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/assignment/Assignment_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/assignment/Assignment_4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/assignment/Assignment_6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/assignment/Assignment_6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/assignment/Assignment_6b.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/assignment/Assignment_6b.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/assignment/Assignment_6c.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/assignment/Assignment_6c.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/assignment/Assignment_8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/assignment/Assignment_8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/java/assignment/Assignment_9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/java/assignment/Assignment_9.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/java/assignment/inheritance/InheritInnerClass.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +27,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propGUI" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -64,13 +47,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Assignment_11">
+  <component name="RunManager">
+    <configuration name="ArrayObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.java.assignment.ArrayObject" />
+      <module name="Assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.java.assignment.HashMapChar" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Assignment_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.java.assignment.Assignment_1" />
       <module name="Assignments" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.java.assignment.*" />
+          <option name="PATTERN" value="com.java.assignment.HashMapChar" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,13 +74,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Assignment_11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.java.assignment.Assignment_11" />
+    <configuration name="HashMapChar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.java.assignment.HashMapChar" />
       <module name="Assignments" />
       <option name="PROGRAM_PARAMETERS" value="char.txt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.java.assignment.*" />
+          <option name="PATTERN" value="com.java.assignment.HashMapChar" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,26 +88,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Assignment_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.java.assignment.Assignment_4" />
+    <configuration name="KYCform" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.java.assignment.KYCform" />
       <module name="Assignments" />
       <option name="PROGRAM_PARAMETERS" value="google.com 5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.java.assignment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Assignment_6c" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.java.assignment.Assignment_6c" />
-      <module name="Assignments" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.java.assignment.*" />
+          <option name="PATTERN" value="com.java.assignment.HashMapChar" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,7 +107,7 @@
       <module name="Assignments" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.java.assignment.*" />
+          <option name="PATTERN" value="com.java.assignment.HashMapChar" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,17 +117,17 @@
     </configuration>
     <list>
       <item itemvalue="Application.Assignment_1" />
-      <item itemvalue="Application.Assignment_4" />
+      <item itemvalue="Application.KYCform" />
       <item itemvalue="Application.SList" />
-      <item itemvalue="Application.Assignment_6c" />
-      <item itemvalue="Application.Assignment_11" />
+      <item itemvalue="Application.ArrayObject" />
+      <item itemvalue="Application.HashMapChar" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Assignment_11" />
+        <item itemvalue="Application.HashMapChar" />
         <item itemvalue="Application.SList" />
-        <item itemvalue="Application.Assignment_6c" />
-        <item itemvalue="Application.Assignment_4" />
+        <item itemvalue="Application.ArrayObject" />
+        <item itemvalue="Application.KYCform" />
         <item itemvalue="Application.Assignment_1" />
       </list>
     </recent_temporary>
